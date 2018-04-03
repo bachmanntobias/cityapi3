@@ -1,0 +1,11 @@
+c:\users\bachmann\source\repos\City3\City3.API\bin\Debug\netcoreapp2.0\City3.API.deps.json
+c:\users\bachmann\source\repos\City3\City3.API\bin\Debug\netcoreapp2.0\City3.API.runtimeconfig.json
+c:\users\bachmann\source\repos\City3\City3.API\bin\Debug\netcoreapp2.0\City3.API.runtimeconfig.dev.json
+c:\users\bachmann\source\repos\City3\City3.API\bin\Debug\netcoreapp2.0\City3.API.dll
+c:\users\bachmann\source\repos\City3\City3.API\bin\Debug\netcoreapp2.0\City3.API.pdb
+c:\users\bachmann\source\repos\City3\City3.API\obj\Debug\netcoreapp2.0\City3.API.csprojResolveAssemblyReference.cache
+c:\users\bachmann\source\repos\City3\City3.API\obj\Debug\netcoreapp2.0\City3.API.csproj.CoreCompileInputs.cache
+c:\users\bachmann\source\repos\City3\City3.API\obj\Debug\netcoreapp2.0\City3.API.AssemblyInfoInputs.cache
+c:\users\bachmann\source\repos\City3\City3.API\obj\Debug\netcoreapp2.0\City3.API.AssemblyInfo.cs
+c:\users\bachmann\source\repos\City3\City3.API\obj\Debug\netcoreapp2.0\City3.API.dll
+c:\users\bachmann\source\repos\City3\City3.API\obj\Debug\netcoreapp2.0\City3.API.pdb

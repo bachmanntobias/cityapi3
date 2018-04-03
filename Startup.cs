@@ -15,6 +15,7 @@ namespace City3.API
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -25,10 +26,30 @@ namespace City3.API
                 app.UseDeveloperExceptionPage();
             }
 
+            else
+            {
+                app.UseExceptionHandler();
+            }
+
+            app.UseStatusCodePages();
+
+            app.UseMvc();
+
+
+            /*
+            app.Run((context) =>
+            {
+                throw new Exception("Example exception");
+            }
+            );
+
+         
             app.Run(async (context) =>
             {
                 await context.Response.WriteAsync("Hello World!");
             });
+            all this ist within the comments
+            */
         }
     }
 }
