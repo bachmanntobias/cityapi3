@@ -45,6 +45,15 @@ namespace City3.API
             Id = 2,
             Name = "Grosswallstadt",
             Description =  "Standort",
+            PointsOfInterest = new List< PointOfInterestDto > ()
+                    {
+                        new PointOfInterestDto()
+                        {
+                            Id = 1,
+                            Name = "Weinberg",
+                            Description = "OK",
+                        }
+                    }
         },
 
                     new CityDto()

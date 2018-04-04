@@ -10,7 +10,7 @@ namespace City3.API.Controllers
     [Route("api/cities")]
     public class CitiesController : Controller
     {
-        [HttpGet()]
+        [HttpGet()] 
         //[HttpGet("api/[controller]")]
         public  IActionResult GetCities()
 

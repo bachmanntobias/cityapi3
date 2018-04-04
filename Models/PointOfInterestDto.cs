@@ -13,7 +13,7 @@ namespace City3.API.Models
         
         public String Description { get; set; }
 
-     
+        
 
     }
 }
