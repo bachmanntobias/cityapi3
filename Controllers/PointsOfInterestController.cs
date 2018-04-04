@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using City3.API.Models;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 
 namespace City3.API.Controllers
@@ -95,6 +96,7 @@ namespace City3.API.Controllers
                 ModelState.AddModelError("Description", "The Provided description should be different from the name.");
             }
 
+
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
@@ -119,6 +121,48 @@ namespace City3.API.Controllers
 
             return NoContent();
         }
+
+        /*
+        [HttpPatch("{cityId}/poi/{id}")]
+        public IActionResult PartiallyUpdatedPointOfInterest (int cityId, int id, [FromBody] JsonPatchDocument<PointOfInterestDto> patchDoc)
+        {
+            if (patchDoc == null)
+            {
+                return BadRequest();
+            }
+
+            var city = CitiesDataStore.Current.Cities.FirstOrDefault(c => c.Id == cityId);
+
+            if (city == null)
+            {
+                return NotFound();
+            }
+
+            var pointOfInterestFromStore = city.PointsOfInterest.FirstOrDefault(p => p.Id == id);
+
+            if (pointOfInterestFromStore == null)
+            {
+                return NotFound();
+            }
+
+            var pointOfInterestToPatch = new PointOfInterestForUpdateDto()
+
+            {
+                Name = pointOfInterestFromStore.Name,
+                Description = pointOfInterestFromStore.Description
+            };
+
+            patchDoc.ApplyTo(pointOfInterestToPatch, ModelState);
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+   }
+       */ 
+
+
 
     }
 }
