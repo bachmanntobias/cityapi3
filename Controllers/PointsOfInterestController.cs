@@ -122,9 +122,10 @@ namespace City3.API.Controllers
             return NoContent();
         }
 
-        /*
-        [HttpPatch("{cityId}/poi/{id}")]
-        public IActionResult PartiallyUpdatedPointOfInterest (int cityId, int id, [FromBody] JsonPatchDocument<PointOfInterestDto> patchDoc)
+
+        [HttpPatch("{cityId}/pointsofinterest/{id}")]
+        public IActionResult PartiallyUpdatePointOfInterest(int cityId, int id,
+           [FromBody] JsonPatchDocument<PointOfInterestForUpdateDto> patchDoc)
         {
             if (patchDoc == null)
             {
@@ -132,25 +133,23 @@ namespace City3.API.Controllers
             }
 
             var city = CitiesDataStore.Current.Cities.FirstOrDefault(c => c.Id == cityId);
-
             if (city == null)
             {
                 return NotFound();
             }
 
-            var pointOfInterestFromStore = city.PointsOfInterest.FirstOrDefault(p => p.Id == id);
-
+            var pointOfInterestFromStore = city.PointsOfInterest.FirstOrDefault(c => c.Id == id);
             if (pointOfInterestFromStore == null)
             {
                 return NotFound();
             }
 
-            var pointOfInterestToPatch = new PointOfInterestForUpdateDto()
-
-            {
-                Name = pointOfInterestFromStore.Name,
-                Description = pointOfInterestFromStore.Description
-            };
+            var pointOfInterestToPatch =
+                   new PointOfInterestForUpdateDto()
+                   {
+                       Name = pointOfInterestFromStore.Name,
+                       Description = pointOfInterestFromStore.Description
+                   };
 
             patchDoc.ApplyTo(pointOfInterestToPatch, ModelState);
 
@@ -159,8 +158,8 @@ namespace City3.API.Controllers
                 return BadRequest(ModelState);
             }
 
-   }
-       */ 
+        }    
+       
 
 
 
