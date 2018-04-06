@@ -13,6 +13,7 @@ namespace City3.API.Enteties
 
         public String Description {get; set;}
 
-
+        public ICollection<PointsOfInterest> PointsOfInterest { get; set; }
+            = new List<PointsOfInterest>();
     }
 }
