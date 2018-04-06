@@ -8,8 +8,8 @@ namespace City3.API.Services
 {
     public class CloudMailService : IMailService
     {
-        private String _mailTo = "admin@me.de";
-        private String _mailFrom = "user@me.de";
+        private string _mailTo = Startup.Configuration["mailSettings:mailToAddress"];
+        private string _mailFrom = Startup.Configuration["mailSettings:mailFromAddress"];
 
         public void Send(String subject, String message)
         {

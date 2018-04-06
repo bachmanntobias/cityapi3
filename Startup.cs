@@ -22,6 +22,13 @@ namespace City3.API
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            /* #for ASP.NET 1 :
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(env.ContentRootPath)
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange:true);
+               
+            Configuration = builder.Build();   
+            */
         }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -40,8 +47,11 @@ namespace City3.API
             //    }
             //});
 
+#if DEBUG
             services.AddTransient<IMailService, LocalMailService>();
-
+#else
+            services.AddTransient<IMailService, CloudMailService>();
+#endif
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
