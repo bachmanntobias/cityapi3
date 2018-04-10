@@ -15,7 +15,6 @@ namespace City3.API
                 return;
             }
 
-            // init seed data
             var cities = new List<City>()
             {
                 new City()
@@ -67,7 +66,7 @@ namespace City3.API
                      }
                 }
             };
-
+           
             context.Cities.AddRange(cities);
             context.SaveChanges();
         }
