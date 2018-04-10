@@ -25,6 +25,7 @@
         "dependencies": {
           "Microsoft.AspNet.Mvc": "5.2.4",
           "Microsoft.AspNetCore.All": "2.0.6",
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.0.2",
           "Microsoft.NETCore.App": "2.0.0",
           "NLog.Extensions.Logging": "1.0.0"
         },
