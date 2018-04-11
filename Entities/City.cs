@@ -17,7 +17,6 @@ namespace City3.API.Entities
         [MaxLength(50)]
         public String Name { get; set; }
 
-        
         [MaxLength(200)]
         public String Description {get; set;}
 
