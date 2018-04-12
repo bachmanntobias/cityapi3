@@ -20,7 +20,7 @@ namespace City3.API.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Cities", x => x.Id);
+                    table.PrimaryKey("PK_Cities", x => x.Id);               
                 });
 
             migrationBuilder.CreateTable(
